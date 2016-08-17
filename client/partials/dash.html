@@ -8,10 +8,9 @@
 
 </head>
 <body>
-	
-
 	<h1>Welcome</h1>
 	<div ng-controller = 'friendController'>
+	<div ng-controller = 'showController'>
 	<table class = 'table'>
 		<thead>
 			<tr>
@@ -24,14 +23,15 @@
 		<tbody>
 			<tr ng-repeat = 'friend in friends'>
 				<td>{{friend.fname}} {{friend.lname}}</td>
-				<td><a href="#/show">Show</a></td>
-				<td><a href="#/edit">Edit</a></td>
+				<td><a ng-click='show(friend._id)' href="#/show/{{friend._id}}">Show</a></td>
+				<td><a href="#/update/{{friend._id}}">Edit</a></td>
 				<td><button ng-click='delete(friend._id)'>Delete Friend</button></td>
 			</tr>
 		</tbody>
 	</table>
 	<a href="#/new"><button class='btn btn-primary col-xs-offset-11'>New</button></a>
 
+	</div>
 	</div>
 
 </body>

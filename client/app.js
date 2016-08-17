@@ -5,10 +5,10 @@ var myApp = angular.module('myApp', ['ngRoute'])
 	.when('/new', {
 		templateUrl : 'partials/new.html'
 	})
-	.when('/edit', {
+	.when('/update/:id', {
 		templateUrl : 'partials/edit.html'
 	})
-	.when('/show', {
+	.when('/show/:id', {
 		templateUrl : 'partials/show.html'
 	})
 	.when('/', {
